@@ -1,12 +1,11 @@
 Package: technocolour
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Colour Palettes Based on Electronis Music Records
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: person("Sophie", "Meakin", email = "sophiemeakin@outlook.com", role = c("aut", "cre"))
+Maintainer: Sophie Meakin <sophiemeakin@outlook.com>
+Description: Implementation of colour palettes based on some of my favourite electronic music records.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
