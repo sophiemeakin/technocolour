@@ -1,9 +1,7 @@
 # technocolor
 
 The technocolor package contains colour palettes based on the album
-artwork some of my favourite electronic music records. The name
-“technocolour” is a slight misnomer since they’re not all techno records
-- apologies.
+artwork some of my favourite electronic music records.
 
 ## Installation
 
