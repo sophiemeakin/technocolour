@@ -18,46 +18,59 @@ by default.
 
 ### Availble palettes
 
+List the names of all available palettes with `list_palettes()`:
+
+``` r
+list_palettes()
+```
+
+    ## [1] "esther"           "fluorescent_rush" "glue"             "hot_bot"         
+    ## [5] "ibrik"            "poodle_power"
+
+### Visualise palettes
+
+Visualise a named palette with `print_palette()`:
+
 ``` r
 print_palette(name = "esther")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](README_files/figure-markdown_github/vis_palettes-1.png)
 
 ``` r
 print_palette(name = "fluorescent_rush")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-2.png)
+![](README_files/figure-markdown_github/vis_palettes-2.png)
 
 ``` r
 print_palette(name = "glue")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-3.png)
+![](README_files/figure-markdown_github/vis_palettes-3.png)
 
 ``` r
 print_palette(name = "hot_bot")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-4.png)
+![](README_files/figure-markdown_github/vis_palettes-4.png)
 
 ``` r
 print_palette(name = "ibrik")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-5.png)
+![](README_files/figure-markdown_github/vis_palettes-5.png)
 
 ``` r
 print_palette(name = "poodle_power")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-6.png)
+![](README_files/figure-markdown_github/vis_palettes-6.png)
 
 ### Palette info
 
-The function `info()` prints the name of the track, artist and a URL to
-the song.
+Print the track name, artist name and URL link for a named palette with
+`info()`:
 
 ``` r
 info("fluorescent_rush")

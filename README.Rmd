@@ -34,7 +34,17 @@ your chosen track, specified with `name = "track_name"`. The option `n` allows y
 
 ### Availble palettes
 
-```{r, fig.width=14, fig.height=3}
+List the names of all available palettes with `list_palettes()`:
+
+```{r}
+list_palettes()
+```
+
+### Visualise palettes
+
+Visualise a named palette with `print_palette()`:
+
+```{r vis_palettes, fig.width=14, fig.height=3}
 print_palette(name = "esther")
 print_palette(name = "fluorescent_rush")
 print_palette(name = "glue")
@@ -45,7 +55,7 @@ print_palette(name = "poodle_power")
 
 ### Palette info
 
-The function `info()` prints the name of the track, artist and a URL to the song.
+Print the track name, artist name and URL link for a named palette with `info()`:
 
 ```{r}
 info("fluorescent_rush")
