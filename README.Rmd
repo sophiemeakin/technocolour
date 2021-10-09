@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 devtools::load_all()
 ```
 
-# technocolor
+# technocolor: colour palettes based on electronic music records
 
 The technocolor package contains colour palettes based on the album artwork some of my
 favourite electronic music records.
@@ -32,9 +32,9 @@ devtools::install_github("sophiemeakin/technocolour")
 The `technocolours()` function makes a discrete colour palette based on
 your chosen track, specified with `name = "track_name"`. The option `n` allows you to specify the number of colours in the palette, which is 6 by default.
 
-## Palettes
+### Availble palettes
 
-```{r}
+```{r, fig.width=14, fig.height=3}
 print_palette(name = "esther")
 print_palette(name = "fluorescent_rush")
 print_palette(name = "glue")
@@ -43,7 +43,7 @@ print_palette(name = "ibrik")
 print_palette(name = "poodle_power")
 ```
 
-## Palette info
+### Palette info
 
 The function `info()` prints the name of the track, artist and a URL to the song.
 

@@ -5,6 +5,8 @@ artwork some of my favourite electronic music records.
 
 ## Installation
 
+Install from Github:
+
 ``` r
 devtools::install_github("sophiemeakin/technocolour")
 ```
@@ -16,7 +18,7 @@ your chosen track, specified with `name = "track_name"`. The option `n`
 allows you to specify the number of colours in the palette, which is 6
 by default.
 
-## Palettes
+### Palettes
 
 ``` r
 print_palette(name = "esther")
@@ -54,7 +56,7 @@ print_palette(name = "poodle_power")
 
 ![](README_files/figure-markdown_github/unnamed-chunk-2-6.png)
 
-## Palette info
+### Palette info
 
 The function `info()` prints the name of the track, artist and a URL to
 the song.
@@ -63,6 +65,6 @@ the song.
 info("fluorescent_rush")
 ```
 
-    ## Track name:  One More Flourescent Rush 
+    ## Track name:  One More Fluorescent Rush 
     ##     Artist:  Avalon Emerson 
     ##        URL:  https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
