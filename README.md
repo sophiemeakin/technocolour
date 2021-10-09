@@ -1,11 +1,9 @@
-# technocolor
+# technocolor: colour palettes based on electronic music records
 
 The technocolor package contains colour palettes based on the album
 artwork some of my favourite electronic music records.
 
 ## Installation
-
-Install from Github:
 
 ``` r
 devtools::install_github("sophiemeakin/technocolour")
@@ -18,7 +16,7 @@ your chosen track, specified with `name = "track_name"`. The option `n`
 allows you to specify the number of colours in the palette, which is 6
 by default.
 
-### Palettes
+### Availble palettes
 
 ``` r
 print_palette(name = "esther")
