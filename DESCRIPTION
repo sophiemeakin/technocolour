@@ -2,7 +2,7 @@ Package: technocolour
 Type: Package
 Title: Colour Palettes Based on Electronis Music Records
 Version: 0.1.0
-Authors@R: person("Sophie", "Meakin", email = "sophiemeakin@outlook.com", role = c("aut", "cre"))
+Authors@R: person("Sophie", "Meakin", email = "sophie.meakin@lshtm.ac.uk", role = c("aut", "cre"))
 Maintainer: Sophie Meakin <sophiemeakin@outlook.com>
 Description: Implementation of colour palettes based on some of my favourite electronic music records.
 License: MIT + file LICENSE
