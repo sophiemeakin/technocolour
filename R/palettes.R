@@ -87,7 +87,7 @@ scale_fill_techno <- function(name, n) {
 
 #' Print a palette
 #'
-#' Prints the chosen technocolour palette of length \{n}.
+#' Prints the chosen technocolour palette of length \code{n}.
 #'
 #' @inheritParams technocolours
 #'
