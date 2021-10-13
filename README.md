@@ -67,6 +67,20 @@ print_palette(name = "poodle_power")
 
 ![](README_files/figure-markdown_github/vis_palettes-6.png)
 
+### Examples
+
+``` r
+ggplot(data = iris,
+       aes(x = Petal.Length, y = Petal.Width, col = Species)) +
+  geom_point(size = 3) +
+  scale_color_techno(name = "hot_bot") +
+  theme_bw() +
+  theme(legend.position = "top",
+        text = element_text(size = 14))
+```
+
+![](README_files/figure-markdown_github/example1-1.png)
+
 ### Palette info
 
 Print the track name, artist name and URL link for a named palette with

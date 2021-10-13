@@ -13,7 +13,9 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
+library(ggplot2)
 devtools::load_all()
+
 ```
 
 # technocolor: colour palettes based on electronic music records
@@ -44,13 +46,27 @@ list_palettes()
 
 Visualise a named palette with `print_palette()`:
 
-```{r vis_palettes, fig.width=14, fig.height=3}
+```{r vis_palettes, fig.width=14, fig.height=3, dpi=400}
 print_palette(name = "esther")
 print_palette(name = "fluorescent_rush")
 print_palette(name = "glue")
 print_palette(name = "hot_bot")
 print_palette(name = "ibrik")
 print_palette(name = "poodle_power")
+```
+
+### Examples
+
+```{r example1, fig.width=12, fig.height=6, dpi=400}
+
+ggplot(data = iris,
+       aes(x = Petal.Length, y = Petal.Width, col = Species)) +
+  geom_point(size = 3) +
+  scale_color_techno(name = "hot_bot") +
+  theme_bw() +
+  theme(legend.position = "top",
+        text = element_text(size = 14))
+
 ```
 
 ### Palette info
