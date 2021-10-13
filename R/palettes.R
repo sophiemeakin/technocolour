@@ -18,7 +18,8 @@
 #'
 #' List the names of all palettes available in technocolour.
 #'
-#'
+#' @rdname list_palettes
+#' @export
 list_palettes <- function() {
 
   out <- sort(unique(technocolour::techno_palettes$palette))
@@ -37,6 +38,11 @@ list_palettes <- function() {
 #'
 #' @return A vector of colours.
 #'
+#' @examples
+#' technocolours(name = "fluorescent_rush", n = 6)
+#'
+#' @rdname technocolours
+#' @export
 technocolours <- function(name, n) {
 
   if(!name %in% technocolour::techno_palettes$palette){
@@ -45,7 +51,7 @@ technocolours <- function(name, n) {
 
   pal <- technocolour::techno_palettes$hex[technocolour::techno_palettes$palette == name]
 
-  if(missing(n) | n < 1 | n > 6) {
+  if(missing(n) | !is.integer(n) | n < 1 | n > 6) {
     n <- 6
   }
 
@@ -62,6 +68,18 @@ technocolours <- function(name, n) {
 #'
 #' @inheritParams technocolours
 #'
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(data = iris,
+#' aes(x = Petal.Length, y = Petal.Width, col = Species)) +
+#' geom_point(size = 3) +
+#' scale_color_techno(name = "hot_bot", n = 3)
+#'
+#' @importFrom ggplot2 ggplot aes scale_color_manual
+#'
+#' @rdname scale_color_techno
+#' @export
 scale_color_techno <- function(name, n) {
 
   out <- scale_color_manual(values = technocolours(name = name, n = n))
@@ -76,9 +94,13 @@ scale_color_techno <- function(name, n) {
 #'
 #' @inheritParams technocolours
 #'
+#' @importFrom ggplot2 ggplot aes scale_fill_manual
+#'
+#' @rdname scale_fill_techno
+#' @export
 scale_fill_techno <- function(name, n) {
 
-  ut <- scale_fill_manual(values = technocolours(name = name, n = n))
+  out <- scale_fill_manual(values = technocolours(name = name, n = n))
 
   return(out)
 
@@ -91,7 +113,14 @@ scale_fill_techno <- function(name, n) {
 #'
 #' @inheritParams technocolours
 #'
-print_palette <- function(name = "fluorescent_rush", n = 6) {
+#' @examples
+#' print_palette(name = "glue", n = 6)
+#'
+#' @importFrom graphics image
+#'
+#' @rdname print_palette
+#' @export
+print_palette <- function(name, n) {
 
   col <- technocolour::technocolours(name = name, n = n)
 
@@ -109,6 +138,11 @@ print_palette <- function(name = "fluorescent_rush", n = 6) {
 #'
 #' @return Prints the track name, artist and URL link for the chosen technocolour palette.
 #'
+#' @examples
+#' info(name = "esther")
+#'
+#' @rdname info
+#' @export
 info <- function(name) {
 
   if(!name %in% technocolour::techno_palettes$palette){
