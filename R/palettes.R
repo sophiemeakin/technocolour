@@ -30,7 +30,7 @@ list_palettes <- function() {
 
 #' Make a technocolour palette
 #'
-#' Makes a discrete colour palette of length \code{n} based on the drawn from the chosen technocolour palette.
+#' Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 #'
 #' @param name The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}
 #' @param n The length of the palette, an integer between 1 and 6.
@@ -52,6 +52,35 @@ technocolours <- function(name, n) {
   out <- pal[1:n]
 
   structure(out, class = "palette", name = name)
+
+}
+
+
+#' Make a ggplot colour scale
+#'
+#' Makes a discrete colour scale of length \code{n} from the chosen technocolour palette.
+#'
+#' @inheritParams technocolours
+#'
+scale_color_techno <- function(name, n) {
+
+  out <- scale_color_manual(values = technocolours(name = name, n = n))
+
+  return(out)
+
+}
+
+#' Make a ggplot colour scale
+#'
+#' Makes a discrete fill scale of length \code{n} from the chosen technocolour palette.
+#'
+#' @inheritParams technocolours
+#'
+scale_fill_techno <- function(name, n) {
+
+  ut <- scale_fill_manual(values = technocolours(name = name, n = n))
+
+  return(out)
 
 }
 
