@@ -14,3 +14,12 @@ scale_color_techno(name, n)
 \description{
 Makes a discrete colour scale of length \code{n} from the chosen technocolour palette.
 }
+\examples{
+library(ggplot2)
+
+ggplot(data = iris,
+aes(x = Petal.Length, y = Petal.Width, col = Species)) +
+geom_point(size = 3) +
+scale_color_techno(name = "hot_bot", n = 3)
+
+}

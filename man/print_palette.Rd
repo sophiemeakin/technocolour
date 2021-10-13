@@ -4,7 +4,7 @@
 \alias{print_palette}
 \title{Print a palette}
 \usage{
-print_palette(name = "fluorescent_rush", n = 6)
+print_palette(name, n)
 }
 \arguments{
 \item{name}{The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}}
@@ -13,4 +13,8 @@ print_palette(name = "fluorescent_rush", n = 6)
 }
 \description{
 Prints the chosen technocolour palette of length \code{n}.
+}
+\examples{
+print_palette(name = "glue", n = 6)
+
 }

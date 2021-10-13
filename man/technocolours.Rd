@@ -17,3 +17,7 @@ A vector of colours.
 \description{
 Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 }
+\examples{
+technocolours(name = "fluorescent_rush", n = 6)
+
+}

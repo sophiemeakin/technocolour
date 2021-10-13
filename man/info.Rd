@@ -15,3 +15,7 @@ Prints the track name, artist and URL link for the chosen technocolour palette.
 \description{
 Prints the track name, artist and URL link for the chosen technocolour palette.
 }
+\examples{
+info(name = "esther")
+
+}
