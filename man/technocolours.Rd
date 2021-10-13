@@ -15,5 +15,5 @@ technocolours(name, n)
 A vector of colours.
 }
 \description{
-Makes a discrete colour palette of length \code{n} based on the drawn from the chosen technocolour palette.
+Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 }
