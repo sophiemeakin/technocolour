@@ -35,37 +35,37 @@ Visualise a named palette with `print_palette()`:
 print_palette(name = "esther")
 ```
 
-![](README_files/figure-markdown_github/vis_palettes-1.png)
+![](man/figures/vis_palettes-1.png)
 
 ``` r
 print_palette(name = "fluorescent_rush")
 ```
 
-![](README_files/figure-markdown_github/vis_palettes-2.png)
+![](man/figures/vis_palettes-2.png)
 
 ``` r
 print_palette(name = "glue")
 ```
 
-![](README_files/figure-markdown_github/vis_palettes-3.png)
+![](man/figures/vis_palettes-3.png)
 
 ``` r
 print_palette(name = "hot_bot")
 ```
 
-![](README_files/figure-markdown_github/vis_palettes-4.png)
+![](man/figures/vis_palettes-4.png)
 
 ``` r
 print_palette(name = "ibrik")
 ```
 
-![](README_files/figure-markdown_github/vis_palettes-5.png)
+![](man/figures/vis_palettes-5.png)
 
 ``` r
 print_palette(name = "poodle_power")
 ```
 
-![](README_files/figure-markdown_github/vis_palettes-6.png)
+![](man/figures/vis_palettes-6.png)
 
 ### Examples
 
@@ -79,7 +79,7 @@ ggplot(data = iris,
         text = element_text(size = 14))
 ```
 
-![](README_files/figure-markdown_github/example1-1.png)
+![](man/figures/example1-1.png)
 
 ### Palette info
 
