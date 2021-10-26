@@ -80,7 +80,7 @@ technocolours <- function(name, n) {
 #'
 #' @rdname scale_color_techno
 #' @export
-scale_color_techno <- function(name, n) {
+scale_color_techno <- function(name, n = 6) {
 
   out <- scale_color_manual(values = technocolours(name = name, n = n))
 
@@ -120,7 +120,7 @@ scale_fill_techno <- function(name, n) {
 #'
 #' @rdname print_palette
 #' @export
-print_palette <- function(name, n) {
+print_palette <- function(name, n = 6) {
 
   col <- technocolour::technocolours(name = name, n = n)
 
