@@ -4,7 +4,7 @@ Title: Colour Palettes Based on Electronic Music Records
 Version: 0.1.0
 Authors@R: person("Sophie", "Meakin", email = "sophiemeakin@outlook.com", role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0002-6385-2652"))
 Maintainer: Sophie Meakin <sophiemeakin@outlook.com>
-Description: Implementation of colour palettes based on the album artwork some of my favourite electronic music records.
+Description: Implementation of colour palettes based on the album artwork of electronic music records.
 License: MIT + file LICENSE
 URL: https://github.com/sophiemeakin/technocolour
 Encoding: UTF-8
