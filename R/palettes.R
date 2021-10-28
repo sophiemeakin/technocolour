@@ -2,7 +2,6 @@
 #'
 #' A dataset containing some colour palettes inspired by electronic music record artwork.
 #'
-#'
 #'@format A data frame containing all the colours used in the palette:
 #'\itemize{
 #'   \item palette: The name of the palette
@@ -73,6 +72,8 @@ technocolours <- function(name, n = 6) {
 #'
 #' @inheritParams technocolours
 #'
+#' @return A discrete scale to use for colour in ggplot.
+#'
 #' @examples
 #' library(ggplot2)
 #'
@@ -96,6 +97,10 @@ scale_color_techno <- function(name, n = 6) {
 #' Make a ggplot colour scale
 #'
 #' Makes a discrete fill scale of length \code{n} from the chosen technocolour palette.
+#'
+#' @inheritParams technocolours
+#'
+#' @return A discrete scale to use for fill in ggplot.
 #'
 #' @examples
 #' library(ggplot2)
