@@ -18,6 +18,11 @@
 #'
 #' List the names of all palettes available in technocolour.
 #'
+#' @return A vector of character strings of all available palettes.
+#'
+#' @examples
+#' list_palettes()
+#'
 #' @rdname list_palettes
 #' @export
 list_palettes <- function() {
@@ -92,6 +97,14 @@ scale_color_techno <- function(name, n = 6) {
 #'
 #' Makes a discrete fill scale of length \code{n} from the chosen technocolour palette.
 #'
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(data = iris,
+#' aes(x = Species, y = Petal.Width, fill = Species)) +
+#' geom_violin() +
+#' scale_color_techno(name = "hot_bot", n = 3)
+#'
 #' @inheritParams technocolours
 #'
 #' @importFrom ggplot2 ggplot aes scale_fill_manual
@@ -112,6 +125,8 @@ scale_fill_techno <- function(name, n = 6) {
 #' Prints the chosen technocolour palette of length \code{n}.
 #'
 #' @inheritParams technocolours
+#'
+#' @return A plot showing the colours of the chosen technocolour colour palette.
 #'
 #' @examples
 #' print_palette(name = "glue", n = 6)
