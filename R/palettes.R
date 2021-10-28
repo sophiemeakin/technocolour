@@ -34,7 +34,7 @@ list_palettes <- function() {
 #' Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 #'
 #' @param name The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}
-#' @param n The length of the palette, an integer between 1 and 6.
+#' @param n The length of the palette, an integer between 1 and 6. Default is n = 6.
 #'
 #' @return A vector of colours.
 #'
