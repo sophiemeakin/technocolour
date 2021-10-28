@@ -43,7 +43,7 @@ list_palettes <- function() {
 #'
 #' @rdname technocolours
 #' @export
-technocolours <- function(name, n) {
+technocolours <- function(name, n = 6) {
 
   if(!name %in% technocolour::techno_palettes$palette){
     stop("Palette not found - check palette name")
@@ -98,7 +98,7 @@ scale_color_techno <- function(name, n = 6) {
 #'
 #' @rdname scale_fill_techno
 #' @export
-scale_fill_techno <- function(name, n) {
+scale_fill_techno <- function(name, n = 6) {
 
   out <- scale_fill_manual(values = technocolours(name = name, n = n))
 
