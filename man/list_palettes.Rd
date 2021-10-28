@@ -6,6 +6,13 @@
 \usage{
 list_palettes()
 }
+\value{
+A vector of character strings of all available palettes.
+}
 \description{
 List the names of all palettes available in technocolour.
+}
+\examples{
+list_palettes()
+
 }

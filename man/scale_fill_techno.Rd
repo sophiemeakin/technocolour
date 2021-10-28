@@ -14,3 +14,12 @@ scale_fill_techno(name, n = 6)
 \description{
 Makes a discrete fill scale of length \code{n} from the chosen technocolour palette.
 }
+\examples{
+library(ggplot2)
+
+ggplot(data = iris,
+aes(x = Species, y = Petal.Width, fill = Species)) +
+geom_violin() +
+scale_color_techno(name = "hot_bot", n = 3)
+
+}

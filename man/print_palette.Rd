@@ -11,6 +11,9 @@ print_palette(name, n = 6)
 
 \item{n}{The length of the palette, an integer between 1 and 6. Default is n = 6.}
 }
+\value{
+A plot showing the colours of the chosen technocolour colour palette.
+}
 \description{
 Prints the chosen technocolour palette of length \code{n}.
 }
