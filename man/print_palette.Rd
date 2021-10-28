@@ -4,12 +4,12 @@
 \alias{print_palette}
 \title{Print a palette}
 \usage{
-print_palette(name, n)
+print_palette(name, n = 6)
 }
 \arguments{
 \item{name}{The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}}
 
-\item{n}{The length of the palette, an integer between 1 and 6.}
+\item{n}{The length of the palette, an integer between 1 and 6. Default is n = 6.}
 }
 \description{
 Prints the chosen technocolour palette of length \code{n}.

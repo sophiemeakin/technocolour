@@ -4,12 +4,12 @@
 \alias{scale_fill_techno}
 \title{Make a ggplot colour scale}
 \usage{
-scale_fill_techno(name, n)
+scale_fill_techno(name, n = 6)
 }
 \arguments{
 \item{name}{The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}}
 
-\item{n}{The length of the palette, an integer between 1 and 6.}
+\item{n}{The length of the palette, an integer between 1 and 6. Default is n = 6.}
 }
 \description{
 Makes a discrete fill scale of length \code{n} from the chosen technocolour palette.
