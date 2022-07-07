@@ -5,9 +5,11 @@
 #'@format A data frame containing all the colours used in the palette:
 #'\itemize{
 #'   \item palette: The name of the palette
-#'   \item hex: Hex color code
-#'   \item track: The name of the track on which the palette is based
+#'   \item palette_type: The type of palette: qualitative, sequential, or diverging
+#'   \item hex: Hex colour code
 #'   \item artist: The artist of the track
+#'   \item artist: The name of the record that the track appears on, and on which the palette is based
+#'   \item track: The name of the track
 #'   \item url: A link to the track
 #'}
 "techno_palettes"

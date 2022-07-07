@@ -1,37 +1,43 @@
-﻿palette,hex,track,artist,url
-fluorescent_rush,#592a5c,One More Fluorescent Rush,Avalon Emerson,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
-fluorescent_rush,#c35675,One More Fluorescent Rush,Avalon Emerson,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
-fluorescent_rush,#ebc9e0,One More Fluorescent Rush,Avalon Emerson,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
-fluorescent_rush,#ccb255,One More Fluorescent Rush,Avalon Emerson,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
-fluorescent_rush,#879c36,One More Fluorescent Rush,Avalon Emerson,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
-fluorescent_rush,#404b19,One More Fluorescent Rush,Avalon Emerson,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
-glue,#224c55,Glue,Bicep,https://bicep.bandcamp.com/track/glue
-glue,#fafa6d,Glue,Bicep,https://bicep.bandcamp.com/track/glue
-glue,#e4dde0,Glue,Bicep,https://bicep.bandcamp.com/track/glue
-glue,#09d4e1,Glue,Bicep,https://bicep.bandcamp.com/track/glue
-glue,#05abcb,Glue,Bicep,https://bicep.bandcamp.com/track/glue
-glue,#7d7876,Glue,Bicep,https://bicep.bandcamp.com/track/glue
-esther,#1f3930,Esther,Tzusing,https://liesrecords.bandcamp.com/track/esther
-esther,#e6d0b7,Esther,Tzusing,https://liesrecords.bandcamp.com/track/esther
-esther,#bdee77,Esther,Tzusing,https://liesrecords.bandcamp.com/track/esther
-esther,#dcac60,Esther,Tzusing,https://liesrecords.bandcamp.com/track/esther
-esther,#b1482a,Esther,Tzusing,https://liesrecords.bandcamp.com/track/esther
-esther,#7f5038,Esther,Tzusing,https://liesrecords.bandcamp.com/track/esther
-hot_bot,#6b2b78,Hot Bot,Nite Fleit,https://lookingfortrouble.club/track/hot-bot
-hot_bot,#e096c5,Hot Bot,Nite Fleit,https://lookingfortrouble.club/track/hot-bot
-hot_bot,#d15aa5,Hot Bot,Nite Fleit,https://lookingfortrouble.club/track/hot-bot
-hot_bot,#6e53a2,Hot Bot,Nite Fleit,https://lookingfortrouble.club/track/hot-bot
-hot_bot,#e51f88,Hot Bot,Nite Fleit,https://lookingfortrouble.club/track/hot-bot
-hot_bot,#a12f7e,Hot Bot,Nite Fleit,https://lookingfortrouble.club/track/hot-bot
-ibrik,#173e4f,Ibrik,Bonobo,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik
-ibrik,#aed4dd,Ibrik,Bonobo,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik
-ibrik,#aea29b,Ibrik,Bonobo,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik
-ibrik,#d7a59a,Ibrik,Bonobo,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik
-ibrik,#63aabc,Ibrik,Bonobo,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik
-ibrik,#436475,Ibrik,Bonobo,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik
-poodle_power,#253216,Poodle Power,Avalon Emerson,https://avalonemerson.bandcamp.com/track/poodle-power
-poodle_power,#fdd84f,Poodle Power,Avalon Emerson,https://avalonemerson.bandcamp.com/track/poodle-power
-poodle_power,#a1c434,Poodle Power,Avalon Emerson,https://avalonemerson.bandcamp.com/track/poodle-power
-poodle_power,#e79d00,Poodle Power,Avalon Emerson,https://avalonemerson.bandcamp.com/track/poodle-power
-poodle_power,#c25b09,Poodle Power,Avalon Emerson,https://avalonemerson.bandcamp.com/track/poodle-power
-poodle_power,#3c5c16,Poodle Power,Avalon Emerson,https://avalonemerson.bandcamp.com/track/poodle-power
+﻿palette,palette_type,hex,artist,record,track,url,palette_url
+rush,qualitative,#B789BE,Avalon Emerson,Whities 013,One More Fluorescent Rush,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush,https://coolors.co/b789be-d9b36d-729dbb-d280a2-b7d435-d5715d
+rush,qualitative,#D9B36D,Avalon Emerson,Whities 013,One More Fluorescent Rush,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush,https://coolors.co/b789be-d9b36d-729dbb-d280a2-b7d435-d5715d
+rush,qualitative,#729DBB,Avalon Emerson,Whities 013,One More Fluorescent Rush,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush,https://coolors.co/b789be-d9b36d-729dbb-d280a2-b7d435-d5715d
+rush,qualitative,#D280A2,Avalon Emerson,Whities 013,One More Fluorescent Rush,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush,https://coolors.co/b789be-d9b36d-729dbb-d280a2-b7d435-d5715d
+rush,qualitative,#B7D435,Avalon Emerson,Whities 013,One More Fluorescent Rush,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush,https://coolors.co/b789be-d9b36d-729dbb-d280a2-b7d435-d5715d
+rush,qualitative,#D5715D,Avalon Emerson,Whities 013,One More Fluorescent Rush,https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush,https://coolors.co/b789be-d9b36d-729dbb-d280a2-b7d435-d5715d
+glue,qualitative,#1C3741,Bicep,Bicep,Glue,https://bicep.bandcamp.com/track/glue,https://coolors.co/1c3741-055876-05c0dd-ced7d2-faf87d-bbb85d
+glue,qualitative,#055876,Bicep,Bicep,Glue,https://bicep.bandcamp.com/track/glue,https://coolors.co/1c3741-055876-05c0dd-ced7d2-faf87d-bbb85d
+glue,qualitative,#05C0DD,Bicep,Bicep,Glue,https://bicep.bandcamp.com/track/glue,https://coolors.co/1c3741-055876-05c0dd-ced7d2-faf87d-bbb85d
+glue,qualitative,#CED7D2,Bicep,Bicep,Glue,https://bicep.bandcamp.com/track/glue,https://coolors.co/1c3741-055876-05c0dd-ced7d2-faf87d-bbb85d
+glue,qualitative,#FAF87D,Bicep,Bicep,Glue,https://bicep.bandcamp.com/track/glue,https://coolors.co/1c3741-055876-05c0dd-ced7d2-faf87d-bbb85d
+glue,qualitative,#BBB85D,Bicep,Bicep,Glue,https://bicep.bandcamp.com/track/glue,https://coolors.co/1c3741-055876-05c0dd-ced7d2-faf87d-bbb85d
+esther,diverging,#8F2314,Tzusing,東方不敗,Esther,https://liesrecords.bandcamp.com/track/esther,https://coolors.co/8f2314-d89146-fadab8-f5f5f4-c3d8a4-79a48d-337169
+esther,diverging,#D89146,Tzusing,東方不敗,Esther,https://liesrecords.bandcamp.com/track/esther,https://coolors.co/8f2314-d89146-fadab8-f5f5f4-c3d8a4-79a48d-337170
+esther,diverging,#FADAB8,Tzusing,東方不敗,Esther,https://liesrecords.bandcamp.com/track/esther,https://coolors.co/8f2314-d89146-fadab8-f5f5f4-c3d8a4-79a48d-337171
+esther,diverging,#C3D8A4,Tzusing,東方不敗,Esther,https://liesrecords.bandcamp.com/track/esther,https://coolors.co/8f2314-d89146-fadab8-f5f5f4-c3d8a4-79a48d-337172
+esther,diverging,#79A48D,Tzusing,東方不敗,Esther,https://liesrecords.bandcamp.com/track/esther,https://coolors.co/8f2314-d89146-fadab8-f5f5f4-c3d8a4-79a48d-337173
+esther,diverging,#337169,Tzusing,東方不敗,Esther,https://liesrecords.bandcamp.com/track/esther,https://coolors.co/8f2314-d89146-fadab8-f5f5f4-c3d8a4-79a48d-337174
+hotbot,sequential,#F1D0E1,Nite Fleit,Moogie,Hot Bot,https://www.beatport.com/release/moogie/3778088,https://coolors.co/f1d0e1-dc90bf-db4d9c-c21887-7b2991-5a2671
+hotbot,sequential,#DC90BF,Nite Fleit,Moogie,Hot Bot,https://www.beatport.com/release/moogie/3778089,https://coolors.co/f1d0e1-dc90bf-db4d9c-c21887-7b2991-5a2672
+hotbot,sequential,#DB4D9C,Nite Fleit,Moogie,Hot Bot,https://www.beatport.com/release/moogie/3778090,https://coolors.co/f1d0e1-dc90bf-db4d9c-c21887-7b2991-5a2673
+hotbot,sequential,#C21887,Nite Fleit,Moogie,Hot Bot,https://www.beatport.com/release/moogie/3778091,https://coolors.co/f1d0e1-dc90bf-db4d9c-c21887-7b2991-5a2674
+hotbot,sequential,#7B2991,Nite Fleit,Moogie,Hot Bot,https://www.beatport.com/release/moogie/3778092,https://coolors.co/f1d0e1-dc90bf-db4d9c-c21887-7b2991-5a2675
+hotbot,sequential,#5A2671,Nite Fleit,Moogie,Hot Bot,https://www.beatport.com/release/moogie/3778093,https://coolors.co/f1d0e1-dc90bf-db4d9c-c21887-7b2991-5a2676
+ibrik,sequential,#F0F8F9,Bonobo,Ibrik,Ibrik,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik,https://coolors.co/f0f8f9-b5dae3-7eb7c8-428c9e-2d6376-183e4e
+ibrik,sequential,#B5DAE3,Bonobo,Ibrik,Ibrik,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik,https://coolors.co/f0f8f9-b5dae3-7eb7c8-428c9e-2d6376-183e4e
+ibrik,sequential,#7EB7C8,Bonobo,Ibrik,Ibrik,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik,https://coolors.co/f0f8f9-b5dae3-7eb7c8-428c9e-2d6376-183e4e
+ibrik,sequential,#428C9E,Bonobo,Ibrik,Ibrik,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik,https://coolors.co/f0f8f9-b5dae3-7eb7c8-428c9e-2d6376-183e4e
+ibrik,sequential,#2D6376,Bonobo,Ibrik,Ibrik,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik,https://coolors.co/f0f8f9-b5dae3-7eb7c8-428c9e-2d6376-183e4e
+ibrik,sequential,#183E4E,Bonobo,Ibrik,Ibrik,https://fabricrecords.bandcamp.com/track/b2-bonobo-ibrik,https://coolors.co/f0f8f9-b5dae3-7eb7c8-428c9e-2d6376-183e4e
+poodle,sequential,#F7F2B6,Avalon Emerson,DJ-Kicks EP,Poodle Power,https://avalonemerson.bandcamp.com/track/poodle-power,https://coolors.co/f7f2b6-eee544-f5b910-c06512-893110-3e1c00
+poodle,sequential,#EEE544,Avalon Emerson,DJ-Kicks EP,Poodle Power,https://avalonemerson.bandcamp.com/track/poodle-power,https://coolors.co/f7f2b6-eee544-f5b910-c06512-893110-3e1c01
+poodle,sequential,#F5B910,Avalon Emerson,DJ-Kicks EP,Poodle Power,https://avalonemerson.bandcamp.com/track/poodle-power,https://coolors.co/f7f2b6-eee544-f5b910-c06512-893110-3e1c02
+poodle,sequential,#C06512,Avalon Emerson,DJ-Kicks EP,Poodle Power,https://avalonemerson.bandcamp.com/track/poodle-power,https://coolors.co/f7f2b6-eee544-f5b910-c06512-893110-3e1c03
+poodle,sequential,#893110,Avalon Emerson,DJ-Kicks EP,Poodle Power,https://avalonemerson.bandcamp.com/track/poodle-power,https://coolors.co/f7f2b6-eee544-f5b910-c06512-893110-3e1c04
+poodle,sequential,#3E1C00,Avalon Emerson,DJ-Kicks EP,Poodle Power,https://avalonemerson.bandcamp.com/track/poodle-power,https://coolors.co/f7f2b6-eee544-f5b910-c06512-893110-3e1c05
+bodied,qualitative,#E75136,Effy,Bodied,Bodied,https://effy.bandcamp.com/track/bodied,https://coolors.co/ef4222-9ad7e7-4e8a73-e8a734-6e4b61-177ebb
+bodied,qualitative,#7BCCE0,Effy,Bodied,Bodied,https://effy.bandcamp.com/track/bodied,https://coolors.co/ef4222-9ad7e7-4e8a73-e8a734-6e4b61-177ebb
+bodied,qualitative,#589D82,Effy,Bodied,Bodied,https://effy.bandcamp.com/track/bodied,https://coolors.co/ef4222-9ad7e7-4e8a73-e8a734-6e4b61-177ebb
+bodied,qualitative,#E8A734,Effy,Bodied,Bodied,https://effy.bandcamp.com/track/bodied,https://coolors.co/ef4222-9ad7e7-4e8a73-e8a734-6e4b61-177ebb
+bodied,qualitative,#865B76,Effy,Bodied,Bodied,https://effy.bandcamp.com/track/bodied,https://coolors.co/ef4222-9ad7e7-4e8a73-e8a734-6e4b61-177ebb
+bodied,qualitative,#177EBB,Effy,Bodied,Bodied,https://effy.bandcamp.com/track/bodied,https://coolors.co/ef4222-9ad7e7-4e8a73-e8a734-6e4b61-177ebb
