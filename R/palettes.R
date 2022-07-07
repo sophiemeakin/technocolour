@@ -52,13 +52,17 @@ list_palettes <- function() {
 technocolours <- function(name, n = 6) {
 
   if(!name %in% technocolour::techno_palettes$palette){
-    stop("Palette not found - check palette name")
+    stop("Palette not found - check palette name.")
   }
 
   pal <- technocolour::techno_palettes$hex[technocolour::techno_palettes$palette == name]
 
-  if(missing(n) | !is.integer(n) | n < 1 | n > 6) {
+  if(missing(n) | !is.numeric(n) | n < 1 | n > 6) {
+    message("Parameter n is missing or out of range; default to n = 6.")
     n <- 6
+  } else if(is.numeric(n) & n/floor(n) != 1) {
+    message("Parameter n is not an integer; assigning to floor(n).")
+    n <- floor(n)
   }
 
   out <- pal[1:n]
@@ -143,6 +147,14 @@ scale_fill_techno <- function(name, n = 6) {
 #' @rdname print_palette
 #' @export
 print_palette <- function(name, n = 6) {
+
+  if(missing(n) | !is.numeric(n) | n < 1 | n > 6) {
+    message("Parameter n is missing or out of range; default to n = 6.")
+    n <- 6
+  } else if(is.numeric(n) & n/floor(n) != 1) {
+    message("Parameter n is not an integer; assigning to floor(n).")
+    n <- floor(n)
+  }
 
   col <- technocolour::technocolours(name = name, n = n)
 
