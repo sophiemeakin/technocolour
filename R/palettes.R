@@ -39,7 +39,7 @@ list_palettes <- function() {
 #'
 #' Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 #'
-#' @param name The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}
+#' @param name The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}
 #' @param n The length of the palette, an integer between 1 and 6. Default is n = 6.
 #'
 #' @return A vector of colours.
@@ -82,7 +82,7 @@ technocolours <- function(name, n = 6) {
 #' ggplot(data = iris,
 #' aes(x = Petal.Length, y = Petal.Width, col = Species)) +
 #' geom_point(size = 3) +
-#' scale_color_techno(name = "hot_bot", n = 3)
+#' scale_color_techno(name = "bodied", n = 3)
 #'
 #' @importFrom ggplot2 ggplot aes scale_color_manual
 #'
@@ -96,7 +96,7 @@ scale_color_techno <- function(name, n = 6) {
 
 }
 
-#' Make a ggplot colour scale
+#' Make a ggplot fill scale
 #'
 #' Makes a discrete fill scale of length \code{n} from the chosen technocolour palette.
 #'
@@ -110,7 +110,7 @@ scale_color_techno <- function(name, n = 6) {
 #' ggplot(data = iris,
 #' aes(x = Species, y = Petal.Width, fill = Species)) +
 #' geom_violin() +
-#' scale_color_techno(name = "hot_bot", n = 3)
+#' scale_fill_techno(name = "hotbot", n = 3)
 #'
 #' @inheritParams technocolours
 #'
@@ -172,14 +172,16 @@ info <- function(name) {
   }
 
   pal <- technocolour::techno_palettes[technocolour::techno_palettes$palette == name,
-                                       c("track", "artist", "url")]
+                                       c("artist", "record", "track", "url")]
 
-  track <- unique(pal$track)
   artist <- unique(pal$artist)
+  record <- unique(pal$record)
+  track <- unique(pal$track)
   url <- unique(pal$url)
 
-  cat("Track name: ", track, "\n",
-      "   Artist: ", artist, "\n",
-      "      URL: ", url)
+  cat("     Artist: ", artist, "\n",
+      "    Record: ", record, "\n",
+      "Track name: ", track, "\n",
+      "       URL: ", url)
 
 }
