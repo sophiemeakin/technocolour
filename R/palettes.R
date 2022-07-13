@@ -68,8 +68,10 @@ technocolours <- function(name, n = 6, type = c("discrete", "continuous")) {
   }
 
   # Checks for type
-  if(missing(type) & n < length(pal)) {
+  if(missing(type) & n <= length(pal)) {
     type <- "discrete"
+  } else if (missing(type) & n > length(pal)) {
+    type <- "continuous"
   }
   type <- match.arg(type)
 
