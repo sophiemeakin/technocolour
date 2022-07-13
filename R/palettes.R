@@ -49,23 +49,43 @@ list_palettes <- function() {
 #'
 #' @rdname technocolours
 #' @export
-technocolours <- function(name, n = 6) {
+technocolours <- function(name, n = 6, type = c("discrete", "continuous")) {
 
-  if(!name %in% technocolour::techno_palettes$palette){
+  # Checks for name
+  if(!name %in% technocolour::techno_palettes$palette) {
     stop("Palette not found - check palette name.")
   }
 
+  # Load basic palette
   pal <- technocolour::techno_palettes$hex[technocolour::techno_palettes$palette == name]
+  pal_type <- unique(technocolour::techno_palettes$palette_type[technocolour::techno_palettes$palette == name])
 
-  if(missing(n) | !is.numeric(n) | n < 1 | n > 6) {
-    message("Parameter n is missing or out of range; default to n = 6.")
+  # Checks for n
+  if(missing(n)) {
     n <- 6
-  } else if(is.numeric(n) & n/floor(n) != 1) {
-    message("Parameter n is not an integer; assigning to floor(n).")
-    n <- floor(n)
+  } else if(!is.numeric(n) | (is.numeric(n) & n/floor(n) != 1)) {
+    stop("Parameter n is not an integer - assign integer value to n.")
   }
 
-  out <- pal[1:n]
+  # Checks for type
+  if(missing(type) & n < length(pal)) {
+    type <- "discrete"
+  }
+  type <- match.arg(type)
+
+  # Other checks
+  if(type == "discrete" & n > length(pal)) {
+    stop("Parameter n larger than number of colours available - try a continuous palette.")
+  } else if(type == "continuous" & pal_type == "qualitative") {
+    stop("Continuous palette not available for qualitative colours - try a discrete palette.")
+  }
+
+  # Make the palette!
+  if(type == "discrete") {
+    out <- pal[1:n]
+  } else {
+    out <- grDevices::colorRampPalette(pal)(n)
+  }
 
   structure(out, class = "palette", name = name)
 
@@ -146,25 +166,17 @@ scale_fill_techno <- function(name, n = 6) {
 #'
 #' @rdname print_palette
 #' @export
-print_palette <- function(name, n = 6) {
+print_palette <- function(name, n, type) {
 
-  if(missing(n) | !is.numeric(n) | n < 1 | n > 6) {
-    message("Parameter n is missing or out of range; default to n = 6.")
-    n <- 6
-  } else if(is.numeric(n) & n/floor(n) != 1) {
-    message("Parameter n is not an integer; assigning to floor(n).")
-    n <- floor(n)
-  }
+  col <- technocolour::technocolours(name = name, n = n, type = type)
 
-  col <- technocolour::technocolours(name = name, n = n)
-
-  image(1:n, 1, as.matrix(1:n), col = col,
+  image(1:length(col), 1, as.matrix(1:length(col)), col = col,
         main = name, ylab = "", xlab = " ", xaxt = "n", yaxt = "n",  bty = "n")
 
 }
 
 
-#' Print palette information
+#' Print record information
 #'
 #' Prints the track name, artist and URL link for the chosen technocolour palette.
 #'
