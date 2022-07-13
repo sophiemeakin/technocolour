@@ -2,12 +2,12 @@
 % Please edit documentation in R/palettes.R
 \name{info}
 \alias{info}
-\title{Print palette information}
+\title{Print record information}
 \usage{
 info(name)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}}
+\item{name}{The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}}
 }
 \value{
 Prints the track name, artist and URL link for the chosen technocolour palette.

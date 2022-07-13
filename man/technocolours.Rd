@@ -4,10 +4,10 @@
 \alias{technocolours}
 \title{Make a technocolour palette}
 \usage{
-technocolours(name, n = 6)
+technocolours(name, n = 6, type = c("discrete", "continuous"))
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}}
+\item{name}{The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}}
 
 \item{n}{The length of the palette, an integer between 1 and 6. Default is n = 6.}
 }

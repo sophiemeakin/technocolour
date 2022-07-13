@@ -7,9 +7,12 @@
 scale_color_techno(name, n = 6)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{flourescent_rush}, \code{glue}, \code{esther}, \code{hot_bot}, \code{ibrik}, \code{poodle_power}}
+\item{name}{The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}}
 
 \item{n}{The length of the palette, an integer between 1 and 6. Default is n = 6.}
+}
+\value{
+A discrete scale to use for colour in ggplot.
 }
 \description{
 Makes a discrete colour scale of length \code{n} from the chosen technocolour palette.
@@ -20,6 +23,6 @@ library(ggplot2)
 ggplot(data = iris,
 aes(x = Petal.Length, y = Petal.Width, col = Species)) +
 geom_point(size = 3) +
-scale_color_techno(name = "hot_bot", n = 3)
+scale_color_techno(name = "bodied", n = 3)
 
 }
