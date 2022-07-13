@@ -24,8 +24,7 @@ List the names of all available palettes with `list_palettes()`:
 list_palettes()
 ```
 
-    ## [1] "esther"           "fluorescent_rush" "glue"             "hot_bot"         
-    ## [5] "ibrik"            "poodle_power"
+    ## [1] "bodied" "esther" "glue"   "hotbot" "ibrik"  "poodle" "rush"
 
 ### Visualise palettes
 
@@ -38,7 +37,7 @@ print_palette(name = "esther")
 ![](man/figures/vis_palettes-1.png)
 
 ``` r
-print_palette(name = "fluorescent_rush")
+print_palette(name = "rush")
 ```
 
 ![](man/figures/vis_palettes-2.png)
@@ -50,7 +49,7 @@ print_palette(name = "glue")
 ![](man/figures/vis_palettes-3.png)
 
 ``` r
-print_palette(name = "hot_bot")
+print_palette(name = "hotbot")
 ```
 
 ![](man/figures/vis_palettes-4.png)
@@ -62,10 +61,16 @@ print_palette(name = "ibrik")
 ![](man/figures/vis_palettes-5.png)
 
 ``` r
-print_palette(name = "poodle_power")
+print_palette(name = "poodle")
 ```
 
 ![](man/figures/vis_palettes-6.png)
+
+``` r
+print_palette(name = "bodied")
+```
+
+![](man/figures/vis_palettes-7.png)
 
 ### Examples
 
@@ -73,7 +78,7 @@ print_palette(name = "poodle_power")
 ggplot(data = iris,
        aes(x = Petal.Length, y = Petal.Width, col = Species)) +
   geom_point(size = 3) +
-  scale_color_techno(name = "hot_bot") +
+  scale_color_techno(name = "bodied") +
   theme_bw() +
   theme(legend.position = "top",
         text = element_text(size = 14))
@@ -87,9 +92,10 @@ Print the track name, artist name and URL link for a named palette with
 `info()`:
 
 ``` r
-info("fluorescent_rush")
+info("rush")
 ```
 
-    ## Track name:  One More Fluorescent Rush 
-    ##     Artist:  Avalon Emerson 
-    ##        URL:  https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
+    ##      Artist:  Avalon Emerson 
+    ##      Record:  Whities 013 
+    ##  Track name:  One More Fluorescent Rush 
+    ##         URL:  https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
