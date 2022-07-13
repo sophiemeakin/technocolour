@@ -49,7 +49,7 @@ list_palettes <- function() {
 #'
 #' @rdname technocolours
 #' @export
-technocolours <- function(name, n = 6, type = c("discrete", "continuous")) {
+technocolours <- function(name, n, type = c("discrete", "continuous")) {
 
   # Checks for name
   if(!name %in% technocolour::techno_palettes$palette) {
@@ -62,7 +62,7 @@ technocolours <- function(name, n = 6, type = c("discrete", "continuous")) {
 
   # Checks for n
   if(missing(n)) {
-    n <- 6
+    n <- length(pal)
   } else if(!is.numeric(n) | (is.numeric(n) & n/floor(n) != 1)) {
     stop("Parameter n is not an integer - assign integer value to n.")
   }
