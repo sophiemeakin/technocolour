@@ -1,7 +1,7 @@
-# technocolor: colour palettes based on electronic music records
+# technocolour: colour palettes based on electronic music records
 
-The technocolor package contains colour palettes based on the album
-artwork some of my favourite electronic music records.
+The `technocolour` package contains colour palettes based on the album
+artwork some of my favourite electronic music records. Enjoy!
 
 ## Installation
 
@@ -98,3 +98,8 @@ info("rush")
     ##      Record:  Whities 013 
     ##  Track name:  One More Fluorescent Rush 
     ##         URL:  https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
+
+## Contributing
+
+Please add new palettes based on your favourite records! Contributing
+guide coming soon! 👀

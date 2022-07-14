@@ -19,9 +19,9 @@ devtools::load_all()
 
 ```
 
-# technocolor: colour palettes based on electronic music records
+# technocolour: colour palettes based on electronic music records
 
-The technocolor package contains colour palettes based on the album artwork some of my favourite electronic music records.
+The `technocolour` package contains colour palettes based on the album artwork some of my favourite electronic music records. Enjoy!
 
 ## Installation
 
@@ -76,3 +76,7 @@ Print the track name, artist name and URL link for a named palette with `info()`
 ```{r}
 info("rush")
 ```
+
+## Contributing
+
+Please add new palettes based on your favourite records! Contributing guide coming soon! `r emo::ji("eyes")`
