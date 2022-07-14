@@ -19,6 +19,8 @@
 #'
 #' List the names of all palettes available in technocolour.
 #'
+#' @param type The type of colour palette. One of: "qualitative", "sequential", "diverging".
+#'
 #' @return A vector of character strings of all available palettes.
 #'
 #' @examples
@@ -26,9 +28,22 @@
 #'
 #' @rdname list_palettes
 #' @export
-list_palettes <- function() {
+list_palettes <- function(type) {
 
-  out <- sort(unique(technocolour::techno_palettes$palette))
+  # Checks for type
+  if(missing(type)) {
+    type <- c("qualitative", "sequential", "diverging")
+  } else if(!type %in% c("qualitative", "sequential", "diverging")) {
+    stop("Palette type invalid - choose one of: qualitative, sequential, or diverging")
+  }
+
+  # Get palettes
+  pals <- unique(
+    technocolour::techno_palettes[technocolour::techno_palettes$palette_type %in% type,
+                                        c("palette", "palette_type")]
+    )
+
+  out <- sort(pals$palette)
 
   return(out)
 
@@ -39,17 +54,18 @@ list_palettes <- function() {
 #'
 #' Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 #'
-#' @param name The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}
-#' @param n The length of the palette, an integer between 1 and 6. Default is n = 6.
+#' @param name The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"}, \code{"glue"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}
+#' @param n The integer length of the desired palette. Default value is the length of the specified palette.
+#' @param interpolate Either TRUE or FALSE. Indicates whether sequential or diverging palettes should interpolate between colours. Not available for qualitative palettes. Default is TRUE.
 #'
 #' @return A vector of colours.
 #'
 #' @examples
-#' technocolours(name = "fluorescent_rush", n = 6)
+#' technocolours(name = "rush", n = 6)
 #'
 #' @rdname technocolours
 #' @export
-technocolours <- function(name, n, type = c("discrete", "continuous")) {
+technocolours <- function(name, n, interpolate = TRUE) {
 
   # Checks for name
   if(!name %in% technocolour::techno_palettes$palette) {
@@ -67,26 +83,16 @@ technocolours <- function(name, n, type = c("discrete", "continuous")) {
     stop("Parameter n is not an integer - assign integer value to n.")
   }
 
-  # Checks for type
-  if(missing(type) & n <= length(pal)) {
-    type <- "discrete"
-  } else if (missing(type) & n > length(pal)) {
-    type <- "continuous"
-  }
-  type <- match.arg(type)
-
-  # Other checks
-  if(type == "discrete" & n > length(pal)) {
-    stop("Parameter n larger than number of colours available - try a continuous palette.")
-  } else if(type == "continuous" & pal_type == "qualitative") {
-    stop("Continuous palette not available for qualitative colours - try a discrete palette.")
+  # Checks for interpolate
+  if(pal_type == "qualitative") {
+    interpolate <- FALSE
   }
 
   # Make the palette!
-  if(type == "discrete") {
-    out <- pal[1:n]
-  } else {
+  if(interpolate) {
     out <- grDevices::colorRampPalette(pal)(n)
+  } else {
+    out <- pal[1:n]
   }
 
   structure(out, class = "palette", name = name)
@@ -114,13 +120,14 @@ technocolours <- function(name, n, type = c("discrete", "continuous")) {
 #'
 #' @rdname scale_color_techno
 #' @export
-scale_color_techno <- function(name, n = 6) {
+scale_color_techno <- function(name, n, ...) {
 
-  out <- scale_color_manual(values = technocolours(name = name, n = n))
+  out <- scale_color_manual(values = technocolours(name = name, n = n, ...))
 
   return(out)
 
 }
+
 
 #' Make a ggplot fill scale
 #'
@@ -144,9 +151,9 @@ scale_color_techno <- function(name, n = 6) {
 #'
 #' @rdname scale_fill_techno
 #' @export
-scale_fill_techno <- function(name, n = 6) {
+scale_fill_techno <- function(name, n, ...) {
 
-  out <- scale_fill_manual(values = technocolours(name = name, n = n))
+  out <- scale_fill_manual(values = technocolours(name = name, ...))
 
   return(out)
 
@@ -162,15 +169,17 @@ scale_fill_techno <- function(name, n = 6) {
 #' @return A plot showing the colours of the chosen technocolour colour palette.
 #'
 #' @examples
-#' print_palette(name = "glue", n = 6)
+#' print_palette(name = "esther")
+#' print_palette(name = "esther", n = 5)
+#' print_palette(name = "esther", n = 5, interpolate = FALSE)
 #'
 #' @importFrom graphics image
 #'
 #' @rdname print_palette
 #' @export
-print_palette <- function(name, n, type) {
+print_palette <- function(name, n, ...) {
 
-  col <- technocolour::technocolours(name = name, n = n, type = type)
+  col <- technocolour::technocolours(name = name, n = n, ...)
 
   image(1:length(col), 1, as.matrix(1:length(col)), col = col,
         main = name, ylab = "", xlab = " ", xaxt = "n", yaxt = "n",  bty = "n")
@@ -187,7 +196,7 @@ print_palette <- function(name, n, type) {
 #' @return Prints the track name, artist and URL link for the chosen technocolour palette.
 #'
 #' @examples
-#' info(name = "esther")
+#' info(name = "rush")
 #'
 #' @rdname info
 #' @export
