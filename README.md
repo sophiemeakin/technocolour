@@ -11,10 +11,23 @@ devtools::install_github("sophiemeakin/technocolour")
 
 ## Usage
 
-The `technocolours()` function makes a discrete colour palette based on
-your chosen track, specified with `name = "track_name"`. The option `n`
-allows you to specify the number of colours in the palette, which is 6
-by default.
+The `technocolours()` function makes discrete and continuous colour
+palettes based on electronic music records, specified with
+`name = "track_name"`.
+
+### Examples
+
+``` r
+ggplot(data = iris,
+       aes(x = Petal.Length, y = Petal.Width, col = Species)) +
+  geom_point(size = 3) +
+  scale_color_techno(name = "rush") +
+  theme_bw() +
+  theme(legend.position = "top",
+        text = element_text(size = 14))
+```
+
+![](man/figures/example1-1.png)
 
 ### Availble palettes
 
@@ -31,13 +44,13 @@ list_palettes()
 Visualise a named palette with `print_palette()`:
 
 ``` r
-print_palette(name = "esther")
+print_palette(name = "bodied")
 ```
 
 ![](man/figures/vis_palettes-1.png)
 
 ``` r
-print_palette(name = "rush")
+print_palette(name = "esther")
 ```
 
 ![](man/figures/vis_palettes-2.png)
@@ -67,24 +80,10 @@ print_palette(name = "poodle")
 ![](man/figures/vis_palettes-6.png)
 
 ``` r
-print_palette(name = "bodied")
+print_palette(name = "rush")
 ```
 
 ![](man/figures/vis_palettes-7.png)
-
-### Examples
-
-``` r
-ggplot(data = iris,
-       aes(x = Petal.Length, y = Petal.Width, col = Species)) +
-  geom_point(size = 3) +
-  scale_color_techno(name = "bodied") +
-  theme_bw() +
-  theme(legend.position = "top",
-        text = element_text(size = 14))
-```
-
-![](man/figures/example1-1.png)
 
 ### Palette info
 
