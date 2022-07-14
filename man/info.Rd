@@ -7,7 +7,7 @@
 info(name)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}}
+\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"}, \code{"glue"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}}
 }
 \value{
 Prints the track name, artist and URL link for the chosen technocolour palette.
@@ -16,6 +16,6 @@ Prints the track name, artist and URL link for the chosen technocolour palette.
 Prints the track name, artist and URL link for the chosen technocolour palette.
 }
 \examples{
-info(name = "esther")
+info(name = "rush")
 
 }

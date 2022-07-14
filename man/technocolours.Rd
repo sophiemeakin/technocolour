@@ -4,12 +4,14 @@
 \alias{technocolours}
 \title{Make a technocolour palette}
 \usage{
-technocolours(name, n = 6, type = c("discrete", "continuous"))
+technocolours(name, n, interpolate = TRUE)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}}
+\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"}, \code{"glue"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}}
 
-\item{n}{The length of the palette, an integer between 1 and 6. Default is n = 6.}
+\item{n}{The integer length of the desired palette. Default value is the length of the specified palette.}
+
+\item{interpolate}{Either TRUE or FALSE. Indicates whether sequential or diverging palettes should interpolate between colours. Not available for qualitative palettes. Default is TRUE.}
 }
 \value{
 A vector of colours.
@@ -18,6 +20,6 @@ A vector of colours.
 Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 }
 \examples{
-technocolours(name = "fluorescent_rush", n = 6)
+technocolours(name = "rush", n = 6)
 
 }

@@ -4,12 +4,12 @@
 \alias{print_palette}
 \title{Print a palette}
 \usage{
-print_palette(name, n, type)
+print_palette(name, n, ...)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}}
+\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"}, \code{"glue"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}}
 
-\item{n}{The length of the palette, an integer between 1 and 6. Default is n = 6.}
+\item{n}{The integer length of the desired palette. Default value is the length of the specified palette.}
 }
 \value{
 A plot showing the colours of the chosen technocolour colour palette.
@@ -18,6 +18,8 @@ A plot showing the colours of the chosen technocolour colour palette.
 Prints the chosen technocolour palette of length \code{n}.
 }
 \examples{
-print_palette(name = "glue", n = 6)
+print_palette(name = "esther")
+print_palette(name = "esther", n = 5)
+print_palette(name = "esther", n = 5, interpolate = FALSE)
 
 }

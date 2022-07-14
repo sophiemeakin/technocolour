@@ -4,7 +4,10 @@
 \alias{list_palettes}
 \title{List all available palettes}
 \usage{
-list_palettes()
+list_palettes(type)
+}
+\arguments{
+\item{type}{The type of colour palette. One of: "qualitative", "sequential", "diverging".}
 }
 \value{
 A vector of character strings of all available palettes.

@@ -4,12 +4,12 @@
 \alias{scale_color_techno}
 \title{Make a ggplot colour scale}
 \usage{
-scale_color_techno(name, n = 6)
+scale_color_techno(name, n, ...)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{rush}, \code{glue}, \code{esther}, \code{hotbot}, \code{ibrik}, \code{poodle}}
+\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"}, \code{"glue"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}}
 
-\item{n}{The length of the palette, an integer between 1 and 6. Default is n = 6.}
+\item{n}{The integer length of the desired palette. Default value is the length of the specified palette.}
 }
 \value{
 A discrete scale to use for colour in ggplot.
