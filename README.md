@@ -5,17 +5,44 @@ artwork some of my favourite electronic music records. Enjoy!
 
 ## Installation
 
+You can install the package from Github:
+
 ``` r
 devtools::install_github("sophiemeakin/technocolour")
 ```
 
-## Usage
+## Available palettes
 
-The `technocolours()` function makes discrete and continuous colour
-palettes based on electronic music records, specified with
-`name = "track_name"`.
+![](man/figures/unnamed-chunk-2-1.png)
 
-### Examples
+## Quick-start guide
+
+### List available palettes
+
+List the names of all available palettes with `list_palettes()`; you can
+specify the type of palette (qualitative, sequential, or diverging) with
+the argument `type`:
+
+``` r
+list_palettes()
+```
+
+    ## [1] "bodied" "esther" "hotbot" "ibrik"  "poodle" "rush"   "x"
+
+### Visualise palettes
+
+Preview a named palette with `print_palette()`:
+
+``` r
+print_palette(name = "esther")
+```
+
+![](man/figures/vis_palettes-1.png)
+
+### Using with ggplot2
+
+Use `scale_color_techno()` and `scale_fill_techno()` to use the palette
+in ggplot object:
 
 ``` r
 ggplot(data = iris,
@@ -29,75 +56,23 @@ ggplot(data = iris,
 
 ![](man/figures/example1-1.png)
 
-### Availble palettes
-
-List the names of all available palettes with `list_palettes()`:
-
-``` r
-list_palettes()
-```
-
-    ## [1] "bodied" "esther" "glue"   "hotbot" "ibrik"  "poodle" "rush"
-
-### Visualise palettes
-
-Visualise a named palette with `print_palette()`:
-
-``` r
-print_palette(name = "bodied")
-```
-
-![](man/figures/vis_palettes-1.png)
-
-``` r
-print_palette(name = "esther")
-```
-
-![](man/figures/vis_palettes-2.png)
-
-``` r
-print_palette(name = "glue")
-```
-
-![](man/figures/vis_palettes-3.png)
-
-``` r
-print_palette(name = "hotbot")
-```
-
-![](man/figures/vis_palettes-4.png)
-
-``` r
-print_palette(name = "ibrik")
-```
-
-![](man/figures/vis_palettes-5.png)
-
-``` r
-print_palette(name = "poodle")
-```
-
-![](man/figures/vis_palettes-6.png)
-
-``` r
-print_palette(name = "rush")
-```
-
-![](man/figures/vis_palettes-7.png)
-
 ### Palette info
 
 Print the track name, artist name and URL link for a named palette with
 `info()`:
 
 ``` r
-info("rush")
+info("poodle")
 ```
 
     ##      Artist:  Avalon Emerson 
-    ##      Record:  Whities 013 
-    ##  Track name:  One More Fluorescent Rush 
-    ##         URL:  https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush
+    ##      Record:  DJ-Kicks EP 
+    ##  Track name:  Poodle Power 
+    ##         URL:  https://avalonemerson.bandcamp.com/track/poodle-power
+
+Please read the [package
+documentation](https://sophiemeakin.github.io/technocolour/reference/index.html)
+for full details of how to use package.
 
 ## Contributing
 

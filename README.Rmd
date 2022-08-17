@@ -25,15 +25,47 @@ The `technocolour` package contains colour palettes based on the album artwork s
 
 ## Installation
 
+You can install the package from Github:
+
 ```{r, eval = FALSE}
 devtools::install_github("sophiemeakin/technocolour")
 ```
 
-## Usage
+## Available palettes
 
-The `technocolours()` function makes discrete and continuous colour palettes based on electronic music records, specified with `name = "track_name"`.
+```{r echo = FALSE, fig.width = 14, fig.height = 6}
+par(mfrow = c(ceiling(length(list_palettes())/4), 4))
+print_palette(name = "bodied")
+print_palette(name = "esther")
+print_palette(name = "hotbot")
+print_palette(name = "ibrik")
+print_palette(name = "poodle")
+print_palette(name = "rush")
+print_palette(name = "x")
+par(mfrow = c(1,1))
+```
 
-### Examples
+## Quick-start guide
+
+### List available palettes
+
+List the names of all available palettes with `list_palettes()`; you can specify the type of palette (qualitative, sequential, or diverging) with the argument `type`:
+
+```{r}
+list_palettes()
+```
+
+### Visualise palettes
+
+Preview a named palette with `print_palette()`:
+
+```{r vis_palettes, fig.width=14, fig.height=3, dpi=400}
+print_palette(name = "esther")
+```
+
+### Using with ggplot2
+
+Use `scale_color_techno()` and `scale_fill_techno()` to use the palette in ggplot object:
 
 ```{r example1, fig.width = 12, fig.height = 6, dpi = 400}
 
@@ -47,35 +79,15 @@ ggplot(data = iris,
 
 ```
 
-### Availble palettes
-
-List the names of all available palettes with `list_palettes()`:
-
-```{r}
-list_palettes()
-```
-
-### Visualise palettes
-
-Visualise a named palette with `print_palette()`:
-
-```{r vis_palettes, fig.width=14, fig.height=3, dpi=400}
-print_palette(name = "bodied")
-print_palette(name = "esther")
-print_palette(name = "glue")
-print_palette(name = "hotbot")
-print_palette(name = "ibrik")
-print_palette(name = "poodle")
-print_palette(name = "rush")
-```
-
 ### Palette info
 
 Print the track name, artist name and URL link for a named palette with `info()`:
 
 ```{r}
-info("rush")
+info("poodle")
 ```
+
+Please read the [package documentation](https://sophiemeakin.github.io/technocolour/reference/index.html) for full details of how to use package.
 
 ## Contributing
 
