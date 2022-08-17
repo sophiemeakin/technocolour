@@ -182,7 +182,8 @@ print_palette <- function(name, n, ...) {
   col <- technocolour::technocolours(name = name, n = n, ...)
 
   image(1:length(col), 1, as.matrix(1:length(col)), col = col,
-        main = name, ylab = "", xlab = " ", xaxt = "n", yaxt = "n",  bty = "n")
+        main = name, cex.main = 2,
+        ylab = "", xlab = " ", xaxt = "n", yaxt = "n",  bty = "n")
 
 }
 
