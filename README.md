@@ -1,7 +1,9 @@
 # technocolour: colour palettes based on electronic music records
 
-The `technocolour` package contains colour palettes based on the album
-artwork some of my favourite electronic music records. Enjoy!
+The
+[`technocolour`](https://sophiemeakin.github.io/technocolour/index.html)
+package contains colour palettes based on the album artwork some of my
+favourite electronic music records. Enjoy!
 
 ## Installation
 
@@ -19,9 +21,10 @@ devtools::install_github("sophiemeakin/technocolour")
 
 ### List available palettes
 
-List the names of all available palettes with `list_palettes()`; you can
-specify the type of palette (qualitative, sequential, or diverging) with
-the argument `type`:
+List the names of all available palettes with
+[`list_palettes()`](https://sophiemeakin.github.io/technocolour/reference/print_palette.html);
+you can specify the type of palette (qualitative, sequential, or
+diverging) with the argument `type`:
 
 ``` r
 list_palettes()
@@ -31,7 +34,8 @@ list_palettes()
 
 ### Visualise palettes
 
-Preview a named palette with `print_palette()`:
+Preview a named palette with
+[`print_palette()`](https://sophiemeakin.github.io/technocolour/reference/print_palette.html):
 
 ``` r
 print_palette(name = "esther")
@@ -41,8 +45,11 @@ print_palette(name = "esther")
 
 ### Using with ggplot2
 
-Use `scale_color_techno()` and `scale_fill_techno()` to use the palette
-in ggplot object:
+Use
+[`scale_color_techno()`](https://sophiemeakin.github.io/technocolour/reference/scale_color_techno.html)
+and
+[`scale_fill_techno()`](https://sophiemeakin.github.io/technocolour/reference/scale_fill_techno.html)
+to use the palette in ggplot object:
 
 ``` r
 ggplot(data = iris,
@@ -59,7 +66,7 @@ ggplot(data = iris,
 ### Palette info
 
 Print the track name, artist name and URL link for a named palette with
-`info()`:
+[`info()`](https://sophiemeakin.github.io/technocolour/reference/info.html):
 
 ``` r
 info("poodle")
