@@ -49,7 +49,7 @@ par(mfrow = c(1,1))
 
 ### List available palettes
 
-List the names of all available palettes with [`list_palettes()`](https://sophiemeakin.github.io/technocolour/reference/print_palette.html); you can specify the type of palette (qualitative, sequential, or diverging) with the argument `type`:
+List the names of all available palettes with [`list_palettes()`](https://sophiemeakin.github.io/technocolour/reference/list_palettes.html); you can specify the type of palette (qualitative, sequential, or diverging) with the argument `type`:
 
 ```{r}
 list_palettes()

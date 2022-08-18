@@ -22,7 +22,7 @@ devtools::install_github("sophiemeakin/technocolour")
 ### List available palettes
 
 List the names of all available palettes with
-[`list_palettes()`](https://sophiemeakin.github.io/technocolour/reference/print_palette.html);
+[`list_palettes()`](https://sophiemeakin.github.io/technocolour/reference/list_palettes.html);
 you can specify the type of palette (qualitative, sequential, or
 diverging) with the argument `type`:
 
