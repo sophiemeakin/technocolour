@@ -87,7 +87,7 @@ Print the track name, artist name and URL link for a named palette with [`info()
 info("poodle")
 ```
 
-Please read the [package documentation](https://sophiemeakin.github.io/technocolour/reference/index.html) for full details of how to use package.
+Please read the [package documentation](https://sophiemeakin.github.io/technocolour/reference/index.html) for full details.
 
 ## Contributing
 
