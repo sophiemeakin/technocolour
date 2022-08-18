@@ -7,11 +7,11 @@
 technocolours(name, n, interpolate = TRUE)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"}, \code{"glue"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}}
+\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.}
 
 \item{n}{The integer length of the desired palette. Default value is the length of the specified palette.}
 
-\item{interpolate}{Either TRUE or FALSE. Indicates whether sequential or diverging palettes should interpolate between colours. Not available for qualitative palettes. Default is TRUE.}
+\item{interpolate}{Boolean. Indicates whether sequential or diverging palettes should interpolate between colours; this argument is not available for qualitative palettes. Default value is TRUE.}
 }
 \value{
 A vector of colours.

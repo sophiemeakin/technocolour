@@ -54,9 +54,9 @@ list_palettes <- function(type) {
 #'
 #' Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 #'
-#' @param name The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"}, \code{"glue"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}
+#' @param name The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.
 #' @param n The integer length of the desired palette. Default value is the length of the specified palette.
-#' @param interpolate Either TRUE or FALSE. Indicates whether sequential or diverging palettes should interpolate between colours. Not available for qualitative palettes. Default is TRUE.
+#' @param interpolate Boolean. Indicates whether sequential or diverging palettes should interpolate between colours; this argument is not available for qualitative palettes. Default value is TRUE.
 #'
 #' @return A vector of colours.
 #'
