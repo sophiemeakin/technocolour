@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">technocolour</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.0</span>
       </span>
     </div>
 
@@ -68,25 +68,49 @@
 <div class="section level1">
 <div class="page-header"><h1 id="technocolour-colour-palettes-based-on-electronic-music-records">technocolour: colour palettes based on electronic music records<a class="anchor" aria-label="anchor" href="#technocolour-colour-palettes-based-on-electronic-music-records"></a>
 </h1></div>
-<p>The <code>technocolour</code> package contains colour palettes based
-on the album artwork some of my favourite electronic music records.
-Enjoy!</p>
+<p>The <a href="https://sophiemeakin.github.io/technocolour/index.html" class="external-link"><code>technocolour</code></a>
+package contains colour palettes based on the album artwork some of my
+favourite electronic music records. Enjoy!</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
+<p>You can install the package from Github:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"sophiemeakin/technocolour"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+<h2 id="available-palettes">Available palettes<a class="anchor" aria-label="anchor" href="#available-palettes"></a>
 </h2>
-<p>The <code><a href="reference/technocolours.html">technocolours()</a></code> function makes discrete and
-continuous colour palettes based on electronic music records, specified
-with <code>name = "track_name"</code>.</p>
+<p><img src="reference/figures/unnamed-chunk-2-1.png"></p>
+</div>
+<div class="section level2">
+<h2 id="quick-start-guide">Quick-start guide<a class="anchor" aria-label="anchor" href="#quick-start-guide"></a>
+</h2>
 <div class="section level3">
-<h3 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+<h3 id="list-available-palettes">List available palettes<a class="anchor" aria-label="anchor" href="#list-available-palettes"></a>
 </h3>
+<p>List the names of all available palettes with <a href="https://sophiemeakin.github.io/technocolour/reference/list_palettes.html" class="external-link"><code>list_palettes()</code></a>;
+you can specify the type of palette (qualitative, sequential, or
+diverging) with the argument <code>type</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/list_palettes.html">list_palettes</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] "bodied" "esther" "hotbot" "ibrik"  "poodle" "rush"   "x"</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="visualise-palettes">Visualise palettes<a class="anchor" aria-label="anchor" href="#visualise-palettes"></a>
+</h3>
+<p>Preview a named palette with <a href="https://sophiemeakin.github.io/technocolour/reference/print_palette.html" class="external-link"><code>print_palette()</code></a>:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/print_palette.html">print_palette</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"esther"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/vis_palettes-1.png"></p>
+</div>
+<div class="section level3">
+<h3 id="using-with-ggplot2">Using with ggplot2<a class="anchor" aria-label="anchor" href="#using-with-ggplot2"></a>
+</h3>
+<p>Use <a href="https://sophiemeakin.github.io/technocolour/reference/scale_color_techno.html" class="external-link"><code>scale_color_techno()</code></a>
+and <a href="https://sophiemeakin.github.io/technocolour/reference/scale_fill_techno.html" class="external-link"><code>scale_fill_techno()</code></a>
+to use the palette in ggplot object:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">iris</span>,
        <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Petal.Length</span>, y <span class="op">=</span> <span class="va">Petal.Width</span>, col <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_point</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span>
@@ -97,51 +121,18 @@ with <code>name = "track_name"</code>.</p>
 <p><img src="reference/figures/example1-1.png"></p>
 </div>
 <div class="section level3">
-<h3 id="availble-palettes">Availble palettes<a class="anchor" aria-label="anchor" href="#availble-palettes"></a>
-</h3>
-<p>List the names of all available palettes with
-<code><a href="reference/list_palettes.html">list_palettes()</a></code>:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/list_palettes.html">list_palettes</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] "bodied" "esther" "glue"   "hotbot" "ibrik"  "poodle" "rush"</span></span></code></pre></div>
-</div>
-<div class="section level3">
-<h3 id="visualise-palettes">Visualise palettes<a class="anchor" aria-label="anchor" href="#visualise-palettes"></a>
-</h3>
-<p>Visualise a named palette with <code><a href="reference/print_palette.html">print_palette()</a></code>:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/print_palette.html">print_palette</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"bodied"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/vis_palettes-1.png"></p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/print_palette.html">print_palette</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"esther"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/vis_palettes-2.png"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/print_palette.html">print_palette</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"glue"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/vis_palettes-3.png"></p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/print_palette.html">print_palette</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"hotbot"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/vis_palettes-4.png"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/print_palette.html">print_palette</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"ibrik"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/vis_palettes-5.png"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/print_palette.html">print_palette</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"poodle"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/vis_palettes-6.png"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/print_palette.html">print_palette</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"rush"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/vis_palettes-7.png"></p>
-</div>
-<div class="section level3">
 <h3 id="palette-info">Palette info<a class="anchor" aria-label="anchor" href="#palette-info"></a>
 </h3>
 <p>Print the track name, artist name and URL link for a named palette
-with <code><a href="reference/info.html">info()</a></code>:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/info.html">info</a></span><span class="op">(</span><span class="st">"rush"</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">##      Artist:  Avalon Emerson </span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="do">##      Record:  Whities 013 </span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  Track name:  One More Fluorescent Rush </span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="do">##         URL:  https://avalonemerson.bandcamp.com/track/one-more-fluorescent-rush</span></span></code></pre></div>
+with <a href="https://sophiemeakin.github.io/technocolour/reference/info.html" class="external-link"><code>info()</code></a>:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/info.html">info</a></span><span class="op">(</span><span class="st">"poodle"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">##      Artist:  Avalon Emerson </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="do">##      Record:  DJ-Kicks EP </span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  Track name:  Poodle Power </span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">##         URL:  https://avalonemerson.bandcamp.com/track/poodle-power</span></span></code></pre></div>
+<p>Please read the <a href="https://sophiemeakin.github.io/technocolour/reference/index.html" class="external-link">package
+documentation</a> for full details of how to use package.</p>
 </div>
 </div>
 <div class="section level2">
