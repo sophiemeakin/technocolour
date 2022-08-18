@@ -1,7 +1,7 @@
 Package: technocolour
 Type: Package
 Title: Colour Palettes Based on Electronic Music Records
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: person(
     "Sophie", "Meakin",
     email = "sophiemeakin@outlook.com",
