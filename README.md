@@ -79,9 +79,11 @@ info("poodle")
 
 Please read the [package
 documentation](https://sophiemeakin.github.io/technocolour/reference/index.html)
-for full details of how to use package.
+for full details.
 
 ## Contributing
 
-Please add new palettes based on your favourite records! Contributing
-guide coming soon! 👀
+Please add new palettes based on your favourite records! Check out our
+[contributing
+guide](https://sophiemeakin.github.io/technocolour/CONTRIBUTING.html) to
+find out how to get involved.
