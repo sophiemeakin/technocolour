@@ -54,27 +54,27 @@ list_palettes <- function(type) {
 #'
 #' Makes a discrete colour palette of length \code{n} from the chosen technocolour palette.
 #'
-#' @param name The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.
+#' @param palette The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.
 #' @param n The integer length of the desired palette. Default value is the length of the specified palette.
 #' @param interpolate Boolean. Indicates whether sequential or diverging palettes should interpolate between colours; this argument is not available for qualitative palettes. Default value is TRUE.
 #'
 #' @return A vector of colours.
 #'
 #' @examples
-#' technocolours(name = "rush", n = 6)
+#' technocolours(palette = "rush", n = 6)
 #'
 #' @rdname technocolours
 #' @export
-technocolours <- function(name, n, interpolate = TRUE) {
+technocolours <- function(palette, n, interpolate = TRUE) {
 
-  # Checks for name
-  if(!name %in% technocolour::techno_palettes$palette) {
+  # Checks for palette name
+  if(!palette %in% technocolour::techno_palettes$palette) {
     stop("Palette not found - check palette name.")
   }
 
   # Load basic palette
-  pal <- technocolour::techno_palettes$hex[technocolour::techno_palettes$palette == name]
-  pal_type <- unique(technocolour::techno_palettes$palette_type[technocolour::techno_palettes$palette == name])
+  pal <- technocolour::techno_palettes$hex[technocolour::techno_palettes$palette == palette]
+  pal_type <- unique(technocolour::techno_palettes$palette_type[technocolour::techno_palettes$palette == palette])
 
   # Checks for n
   if(missing(n)) {
@@ -95,7 +95,7 @@ technocolours <- function(name, n, interpolate = TRUE) {
     out <- pal[1:n]
   }
 
-  structure(out, class = "palette", name = name)
+  structure(out, class = "palette", name = palette)
 
 }
 
@@ -114,15 +114,15 @@ technocolours <- function(name, n, interpolate = TRUE) {
 #' ggplot(data = iris,
 #' aes(x = Petal.Length, y = Petal.Width, col = Species)) +
 #' geom_point(size = 3) +
-#' scale_color_techno(name = "bodied", n = 3)
+#' scale_color_techno(palette = "bodied", n = 3)
 #'
 #' @importFrom ggplot2 ggplot aes scale_color_manual
 #'
 #' @rdname scale_color_techno
 #' @export
-scale_color_techno <- function(name, n, ...) {
+scale_color_techno <- function(palette, n, ...) {
 
-  out <- scale_color_manual(values = technocolours(name = name, n = n, ...))
+  out <- scale_color_manual(values = technocolours(palette = palette, n = n, ...))
 
   return(out)
 
@@ -143,7 +143,7 @@ scale_color_techno <- function(name, n, ...) {
 #' ggplot(data = iris,
 #' aes(x = Species, y = Petal.Width, fill = Species)) +
 #' geom_violin() +
-#' scale_fill_techno(name = "hotbot", n = 3)
+#' scale_fill_techno(palette = "hotbot", n = 3)
 #'
 #' @inheritParams technocolours
 #'
@@ -151,9 +151,9 @@ scale_color_techno <- function(name, n, ...) {
 #'
 #' @rdname scale_fill_techno
 #' @export
-scale_fill_techno <- function(name, n, ...) {
+scale_fill_techno <- function(palette, n, ...) {
 
-  out <- scale_fill_manual(values = technocolours(name = name, ...))
+  out <- scale_fill_manual(values = technocolours(palette = palette, ...))
 
   return(out)
 
@@ -169,20 +169,20 @@ scale_fill_techno <- function(name, n, ...) {
 #' @return A plot showing the colours of the chosen technocolour colour palette.
 #'
 #' @examples
-#' print_palette(name = "esther")
-#' print_palette(name = "esther", n = 5)
-#' print_palette(name = "esther", n = 5, interpolate = FALSE)
+#' print_palette(palette = "esther")
+#' print_palette(palette = "esther", n = 5)
+#' print_palette(palette = "esther", n = 5, interpolate = FALSE)
 #'
 #' @importFrom graphics image
 #'
 #' @rdname print_palette
 #' @export
-print_palette <- function(name, n, ...) {
+print_palette <- function(palette, n, ...) {
 
-  col <- technocolour::technocolours(name = name, n = n, ...)
+  col <- technocolour::technocolours(palette = palette, n = n, ...)
 
   image(1:length(col), 1, as.matrix(1:length(col)), col = col,
-        main = name, cex.main = 2,
+        main = palette, cex.main = 2,
         ylab = "", xlab = " ", xaxt = "n", yaxt = "n",  bty = "n")
 
 }
@@ -197,17 +197,17 @@ print_palette <- function(name, n, ...) {
 #' @return Prints the track name, artist and URL link for the chosen technocolour palette.
 #'
 #' @examples
-#' info(name = "rush")
+#' info(palette = "rush")
 #'
 #' @rdname info
 #' @export
-info <- function(name) {
+info <- function(palette) {
 
-  if(!name %in% technocolour::techno_palettes$palette){
+  if(!palette %in% technocolour::techno_palettes$palette){
     stop("Palette not found - check palette name")
   }
 
-  pal <- technocolour::techno_palettes[technocolour::techno_palettes$palette == name,
+  pal <- technocolour::techno_palettes[technocolour::techno_palettes$palette == palette,
                                        c("artist", "record", "track", "url")]
 
   artist <- unique(pal$artist)

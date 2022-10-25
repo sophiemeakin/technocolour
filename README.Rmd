@@ -35,13 +35,13 @@ devtools::install_github("sophiemeakin/technocolour")
 
 ```{r echo = FALSE, fig.width = 14, fig.height = 6}
 par(mfrow = c(ceiling(length(list_palettes())/4), 4))
-print_palette(name = "bodied")
-print_palette(name = "esther")
-print_palette(name = "hotbot")
-print_palette(name = "ibrik")
-print_palette(name = "poodle")
-print_palette(name = "rush")
-print_palette(name = "x")
+print_palette(palette = "bodied")
+print_palette(palette = "esther")
+print_palette(palette = "hotbot")
+print_palette(palette = "ibrik")
+print_palette(palette = "poodle")
+print_palette(palette = "rush")
+print_palette(palette = "x")
 par(mfrow = c(1,1))
 ```
 
@@ -60,7 +60,7 @@ list_palettes()
 Preview a named palette with [`print_palette()`](https://sophiemeakin.github.io/technocolour/reference/print_palette.html):
 
 ```{r vis_palettes, fig.width=14, fig.height=3, dpi=400}
-print_palette(name = "esther")
+print_palette(palette = "esther")
 ```
 
 ### Using with ggplot2
@@ -72,7 +72,7 @@ Use [`scale_color_techno()`](https://sophiemeakin.github.io/technocolour/referen
 ggplot(data = iris,
        aes(x = Petal.Length, y = Petal.Width, col = Species)) +
   geom_point(size = 3) +
-  scale_color_techno(name = "rush") +
+  scale_color_techno(palette = "rush") +
   theme_bw() +
   theme(legend.position = "top",
         text = element_text(size = 14))
