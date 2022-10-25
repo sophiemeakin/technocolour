@@ -4,10 +4,10 @@
 \alias{scale_fill_techno}
 \title{Make a ggplot fill scale}
 \usage{
-scale_fill_techno(name, n, ...)
+scale_fill_techno(palette, n, ...)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.}
+\item{palette}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.}
 
 \item{n}{The integer length of the desired palette. Default value is the length of the specified palette.}
 }
@@ -23,6 +23,6 @@ library(ggplot2)
 ggplot(data = iris,
 aes(x = Species, y = Petal.Width, fill = Species)) +
 geom_violin() +
-scale_fill_techno(name = "hotbot", n = 3)
+scale_fill_techno(palette = "hotbot", n = 3)
 
 }

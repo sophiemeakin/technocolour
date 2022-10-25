@@ -4,10 +4,10 @@
 \alias{scale_color_techno}
 \title{Make a ggplot colour scale}
 \usage{
-scale_color_techno(name, n, ...)
+scale_color_techno(palette, n, ...)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.}
+\item{palette}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.}
 
 \item{n}{The integer length of the desired palette. Default value is the length of the specified palette.}
 }
@@ -23,6 +23,6 @@ library(ggplot2)
 ggplot(data = iris,
 aes(x = Petal.Length, y = Petal.Width, col = Species)) +
 geom_point(size = 3) +
-scale_color_techno(name = "bodied", n = 3)
+scale_color_techno(palette = "bodied", n = 3)
 
 }
