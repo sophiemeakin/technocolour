@@ -4,10 +4,10 @@
 \alias{info}
 \title{Print record information}
 \usage{
-info(name)
+info(palette)
 }
 \arguments{
-\item{name}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.}
+\item{palette}{The name of the chosen palette. Choices are from: \code{"bodied"}, \code{"esther"},  \code{"hotbot"}, \code{"ibrik"}, \code{"poodle"}, \code{"rush"}, \code{"x"}.}
 }
 \value{
 Prints the track name, artist and URL link for the chosen technocolour palette.
@@ -16,6 +16,6 @@ Prints the track name, artist and URL link for the chosen technocolour palette.
 Prints the track name, artist and URL link for the chosen technocolour palette.
 }
 \examples{
-info(name = "rush")
+info(palette = "rush")
 
 }
