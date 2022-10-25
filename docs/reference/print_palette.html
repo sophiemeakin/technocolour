@@ -53,12 +53,12 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">print_palette</span><span class="op">(</span><span class="va">name</span>, <span class="va">n</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">print_palette</span><span class="op">(</span><span class="va">palette</span>, <span class="va">n</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>name</dt>
+    <dl><dt>palette</dt>
 <dd><p>The name of the chosen palette. Choices are from: <code>"bodied"</code>, <code>"esther"</code>,  <code>"hotbot"</code>, <code>"ibrik"</code>, <code>"poodle"</code>, <code>"rush"</code>, <code>"x"</code>.</p></dd>
 <dt>n</dt>
 <dd><p>The integer length of the desired palette. Default value is the length of the specified palette.</p></dd>
@@ -70,11 +70,11 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">print_palette</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"esther"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">print_palette</span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"esther"</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="print_palette-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">print_palette</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"esther"</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">print_palette</span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"esther"</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="print_palette-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">print_palette</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"esther"</span>, n <span class="op">=</span> <span class="fl">5</span>, interpolate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">print_palette</span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"esther"</span>, n <span class="op">=</span> <span class="fl">5</span>, interpolate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span class="r-plt img"><img src="print_palette-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 </code></pre></div>
