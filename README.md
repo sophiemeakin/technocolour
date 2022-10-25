@@ -38,7 +38,7 @@ Preview a named palette with
 [`print_palette()`](https://sophiemeakin.github.io/technocolour/reference/print_palette.html):
 
 ``` r
-print_palette(name = "esther")
+print_palette(palette = "esther")
 ```
 
 ![](man/figures/vis_palettes-1.png)
@@ -55,7 +55,7 @@ to use the palette in ggplot object:
 ggplot(data = iris,
        aes(x = Petal.Length, y = Petal.Width, col = Species)) +
   geom_point(size = 3) +
-  scale_color_techno(name = "rush") +
+  scale_color_techno(palette = "rush") +
   theme_bw() +
   theme(legend.position = "top",
         text = element_text(size = 14))
