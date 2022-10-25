@@ -53,12 +53,12 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">scale_color_techno</span><span class="op">(</span><span class="va">name</span>, <span class="va">n</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">scale_color_techno</span><span class="op">(</span><span class="va">palette</span>, <span class="va">n</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>name</dt>
+    <dl><dt>palette</dt>
 <dd><p>The name of the chosen palette. Choices are from: <code>"bodied"</code>, <code>"esther"</code>,  <code>"hotbot"</code>, <code>"ibrik"</code>, <code>"poodle"</code>, <code>"rush"</code>, <code>"x"</code>.</p></dd>
 
 
@@ -80,8 +80,8 @@
 <span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">iris</span>,</span></span>
 <span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Petal.Length</span>, y <span class="op">=</span> <span class="va">Petal.Width</span>, col <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span></span>
-<span class="r-in"><span><span class="fu">scale_color_techno</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"bodied"</span>, n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in technocolours(palette = palette, n = n, ...):</span> unused argument (name = "bodied")</span>
+<span class="r-in"><span><span class="fu">scale_color_techno</span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"bodied"</span>, n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="scale_color_techno-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
